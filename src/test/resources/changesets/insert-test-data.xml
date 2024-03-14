@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="load-exchanges-data" author="admin">
+        <loadData encoding="UTF-8" file="changesets/data/exchanges-test.csv" quotchar="&quot;" separator="," tableName="exchange">
+            <column header="id" name="id"/>
+            <column header="amount" name="amount"/>
+            <column header="currency_from" name="currency_from"/>
+            <column header="currency_to" name="currency_to"/>
+            <column header="date_time" name="date_time"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
